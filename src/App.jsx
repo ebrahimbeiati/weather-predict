@@ -1,6 +1,7 @@
 import CurrentWeather from "./components/CurrentWeather";
 import SearchSection from "./components/SearchSection";
 import HourlyWeatherItem from "./components/HourlyWeatherItem";
+import {weatherCodes} from "./constants";
 import { useState } from "react";
 
 const App = () => {
@@ -10,11 +11,14 @@ const App = () => {
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
-      const temperature = data.current.temp_c;
+      const temperature = Math.floor(data.current.temp_c);
       const description = data.current.condition.text;
+const weatherIcon = Object.keys(weatherCodes).find((icon) =>
+  weatherCodes[icon].includes(data.current.condition.code)
+);
 
 
-      setCurrentWeather({ temperature, description })
+      setCurrentWeather({ temperature, description, weatherIcon });
 
       
     } catch (error) {
