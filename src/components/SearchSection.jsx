@@ -9,7 +9,7 @@ const SearchSection = ({getWeatherDetails}) => {
 
 
         const API_KEY = import.meta.env.VITE_API_KEY; 
-        const API_URL = ` http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}`;
+        const API_URL = ` http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchInput.value}&days=2`;
         getWeatherDetails(API_URL)
 
     
