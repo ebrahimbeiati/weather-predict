@@ -173,3 +173,36 @@ flex-direction: column;
   aspect-ratio: 1;
 
 }
+/* Alert box styling */
+.alert-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 0, 0, 0.9); /* Red background with slight transparency */
+  padding: 15px 25px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  z-index: 9999; /* Ensure it's above other elements */
+}
+
+.alert-message {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.close-alert {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-alert:hover {
+  color: #ffcccb; /* Slight color change on hover */
+}
