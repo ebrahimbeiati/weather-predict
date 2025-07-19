@@ -23,7 +23,7 @@ const SearchSection = ({getWeatherDetails, searchInputRef}) => {
       
   return (
     <div className="search-section">
-      <form action="" className="search-form" onSubmit={handleCitySearch}>
+      <form className="search-form" onSubmit={handleCitySearch}>
         <span className="material-symbols-rounded">search</span>
         <input
           type="search"

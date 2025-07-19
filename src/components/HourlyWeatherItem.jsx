@@ -7,15 +7,13 @@ const HourlyWeatherItem = ({ hour }) => {
   const time = hour.time.slice(11, 16);
   
   return (
-    <div>
-      <li className="weather-item">
-        <p className="time">{time}</p>
-        <img src={`/${weatherIcon}.png`} alt="" className="weather-icon" />
-        <p className="temperature">
-           <span> {temperature}◦c </span>
-        </p>
-      </li>
-    </div>
+    <li className="weather-item">
+      <p className="time">{time}</p>
+      <img src={`/${weatherIcon}.png`} alt="" className="weather-icon" />
+      <p className="temperature">
+         <span> {temperature}◦c </span>
+      </p>
+    </li>
   );
 };
 
